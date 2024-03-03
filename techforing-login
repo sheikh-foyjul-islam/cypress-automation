@@ -1,0 +1,14 @@
+//This code will visit a website login page and will fill up the form and will click on the Login Button//
+describe('TechForing LogIn', () => {
+    it('Visits the Login page', () => {
+      cy.visit('https://techforing.com/accounts/login/')
+      cy.get('#id_login')
+        .type('sheikhislam29@gmail.com')
+    cy.get('#id_password')
+        .type('Puchun 14#')
+    cy.contains('Remember Me')
+        .click()
+    cy.get('.login-btn')
+        .click()
+    })
+  })
